@@ -1,0 +1,73 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+#piano {
+    width: 1100px;
+    height: 400px;
+    background: linear-gradient(#740404, #033d03, #5a055a, #520303);
+    background: -webkit-linear-gradient(#740404, #033d03, #5a055a, #520303);
+    margin: 80px auto;
+    position: relative;
+    border-radius: 30px;
+}
+
+.keys {
+    background-color: #220a0a;
+    width: 980px;
+    height: 290px;
+    padding-left: 5px;
+    margin: 60px auto;
+    overflow: hidden;
+    border-radius: 0 0 20px 20px;
+}
+
+.key {
+    background-color: rgb(115, 185, 247);
+    width: 40px;
+    height: 280px;
+    float: left;
+    margin: 3px;
+    position: relative;
+    border-radius: 0 0 8px 8px;
+}
+
+.key.black-key::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    width: 36px;
+    height: 180px;
+    background-color: #060606;
+    border-radius: 0 0 6px 6px;
+}
+
+@media (max-width: 768px) {
+    #piano {
+        width: 358px;
+    }
+
+    .keys {
+        width: 318px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 769px) {
+    #piano {
+        width: 675px;
+    }
+
+    .keys {
+        width: 633px;
+    }
+}
